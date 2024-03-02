@@ -32,7 +32,7 @@ wandb_name:
 wandb_log_model:
 
 
-gradient_accumulation_steps: 4
+gradient_accumulation_steps: 5
 micro_batch_size: 3
 num_epochs: 1
 optimizer: adamw_bnb_8bit
@@ -54,7 +54,7 @@ xformers_attention:
 flash_attention: true
 
 warmup_ratio: 0.1
-evals_per_epoch: 4
+evals_per_epoch: 1
 eval_table_size:
 eval_max_new_tokens: 128
 saves_per_epoch: 1

@@ -11,6 +11,7 @@ strict: false
 datasets:
   - path: jzsues/sharegpt_gpt4_zh
     type: sharegpt
+    conversation: chatml
 val_set_size: 0.1
 output_dir: ./out
 
@@ -68,3 +69,5 @@ special_tokens:
 hub_model_id: jzsues/gemma-2b-zh-qlora
 hub_strategy: checkpoint
 hf_use_auth_token: true
+
+chat_template: chatml

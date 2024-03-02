@@ -9,7 +9,7 @@ strict: false
 
 # huggingface repo
 datasets:
-  - path: shibing624/sharegpt_gpt4
+  - path: jzsues/sharegpt_gpt4_zh
     type: sharegpt
 val_set_size: 0.1
 output_dir: ./out

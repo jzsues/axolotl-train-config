@@ -24,7 +24,7 @@ sequence_len: 4096
 sample_packing: true
 pad_to_sequence_len: true
 
-wandb_project: gemma-2b-zh
+wandb_project: gemma-2b-zh-qlora
 wandb_entity:
 wandb_watch:
 wandb_name:
@@ -32,7 +32,7 @@ wandb_log_model:
 
 
 gradient_accumulation_steps: 4
-micro_batch_size: 4
+micro_batch_size: 3
 num_epochs: 1
 optimizer: adamw_bnb_8bit
 lr_scheduler: cosine
@@ -65,6 +65,6 @@ fsdp_config:
 special_tokens:
 
 
-hub_model_id: jzsues/gemma-2b-zh
+hub_model_id: jzsues/gemma-2b-zh-qlora
 hub_strategy: checkpoint
 hf_use_auth_token: true

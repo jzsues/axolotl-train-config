@@ -1,21 +1,21 @@
 # use google/gemma-7b if you have access
-base_model: google/gemma-2b
+base_model: google/gemma-2b-it
 model_type: AutoModelForCausalLM
 tokenizer_type: AutoTokenizer
 
 load_in_8bit: false
-load_in_4bit: true
+load_in_4bit: false
 strict: false
 
 # huggingface repo
 datasets:
   - path: jzsues/sharegpt_gpt4_zh
     type: sharegpt
-    conversation: chatml
+    conversation: gemma
 val_set_size: 0.1
 output_dir: ./out
 
-adapter: qlora
+adapter:
 lora_r: 32
 lora_alpha: 16
 lora_dropout: 0.05
@@ -75,7 +75,7 @@ hub_strategy: checkpoint
 hf_use_auth_token: true
 
 
-chat_template: chatml
+chat_template: gemma
 
 
 

@@ -1,4 +1,4 @@
-base_model: google/gemma-2b
+base_model: google/gemma-2b-it
 model_type: AutoModelForCausalLM
 tokenizer_type: LlamaTokenizer
 
@@ -9,7 +9,7 @@ strict: false
 datasets:
   - path: jzsues/sharegpt_gpt4_zh
     type: sharegpt
-    conversation: chatml
+    conversation: gemma
 val_set_size: 0.1
 output_dir: ./lora-out
 
@@ -31,8 +31,8 @@ wandb_watch:
 wandb_name:
 wandb_log_model:
 
-gradient_accumulation_steps: 5
-micro_batch_size: 3
+gradient_accumulation_steps: 4
+micro_batch_size: 4
 num_epochs: 1
 optimizer: adamw_bnb_8bit
 lr_scheduler: cosine
@@ -69,4 +69,4 @@ hub_model_id: jzsues/gemma-2b-zh-lora
 hub_strategy: checkpoint
 hf_use_auth_token: true
 
-chat_template: chatml
+chat_template: gemma
